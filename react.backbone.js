@@ -1,10 +1,10 @@
 (function(root, factory) {
     if (typeof exports === 'object') {
         // CommonJS
-        module.exports = factory(require('backbone'), require('react'), require('underscore'));
+        module.exports = factory(require('backbone'), require('react'), require('lodash'));
     } else if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
-        define(['backbone', 'react', 'underscore'], factory);
+        define(['backbone', 'react', 'lodash'], factory);
     } else {
         // Browser globals
         root.amdWeb = factory(root.Backbone, root.React, root._);
